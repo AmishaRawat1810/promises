@@ -20,6 +20,7 @@ Promise.all(
 );
 
 tasksToRunIn.reduce((p, t) => p.then((_) => TASKS[t]()), Promise.resolve());
+
 Promise.all(
   tasksToRunIn.reduce((p, t) => p.then((_) => TASKS[t]()), Promise.resolve()),
 ).catch((err) => console.log("done"));
