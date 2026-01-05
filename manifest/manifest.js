@@ -5,7 +5,7 @@ async function executeTask(taskName) {
   const content = await Deno.readTextFile(`./manifest/${taskName}.txt`);
   const sum = content.split("\n")
     .reduce((n1, n2) => parseInt(n1) + parseInt(n2));
-  console.log(taskName, " finished");
+  console.log(taskName, " finished\n",'-'.repeat(50));
   return sum;
 }
 
